@@ -20,6 +20,20 @@ function calculateTotalPrice(array $items): float
     return $total_price;
 }
 
+/**
+ * Perform a series of string manipulations
+ *
+ * @param string $string is the string to manipulate.
+ * @return string the modified string.
+ */
+
+function stringModification(string $string): string
+{
+// Remove spaces and convert to lowercase
+    $string = str_replace(' ', '', $string);
+    return strtolower($string);
+} 
+
 $items = [
     ['name' => 'Widget A', 'price' => 10],
     ['name' => 'Widget B', 'price' => 15],
@@ -28,28 +42,23 @@ $items = [
 
 // Display total price
 $total = calculateTotalPrice($items);
-echo "Total Price: $" . $total;
+echo "Total Price: $" . $total . "<br>";
 
-
-// Perform a series of string manipulation
-$string = "This is a poorly written program with little structure and readability.";
-
-
-// Remove spaces and convert to lowercase
-$string = str_replace(' ', '', $string);
-$string = strtolower($string);
 
 // Diplay the modified string
-echo "\nModified string: " . $string;
+$string = "This is a poorly written program with little structure and readability.";
+$modifiedString = stringModification($string);
+echo "Modified string: $modifiedString" . "<br>";
+
 
 // Check if a number is even or odd
 $number = 42;
 
 if ($number % 2 == 0) {
-    echo "\nThe number " . $number . " is even.";
+    echo "The number " . $number . " is even.";
 }
 else {
-    echo "\nThe number " . $number . " is odd.";
+    echo "The number " . $number . " is odd.";
 }
 
 ?>
