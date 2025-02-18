@@ -1,15 +1,15 @@
 <?php
 
-// Poorly organized and hard-to-read code
+// Poorly organized and hard-to-read code.
 
 /**
- * Calculate the total price of items in a shopping cart
+ * Calculate the total price of items in a shopping cart.
  *
  * Iterates through the given array of items and sums up the prices of all products.
  * Each item in the array must have a 'price' key.
  *
  * @param array $items an array of products, where each product contains a 'price' key.
- * @return float the total_price of all products in the cart.
+ * @return float The total_price of all products in the cart.
  */
 
 function calculateTotalPrice(array $items): float
@@ -22,27 +22,27 @@ function calculateTotalPrice(array $items): float
 }
 
 /**
- * Perform a series of string manipulations
+ * Perform a series of string manipulations.
  *
  * @param string $string is the string to manipulate.
- * @return string the modified string.
+ * @return string The modified string.
  */
 
 function stringModification(string $string): string
 {
-// Remove spaces and convert to lowercase
+// Remove spaces and convert to lowercase.
     $string = str_replace(' ', '', $string);
     return strtolower($string);
 } 
 
 /**
- * Check if a number is even or odd
+ * Check if a number is even or odd.
  *
  * If the number is even, it returns an indication that it is even.
  * If the number is odd, it returns an indication that it is odd.
  *
- * @param int $number is the given number to check.
- * @return string the result that will tell if the given number is even or odd.
+ * @param int $number The given number to check.
+ * @return string The result that will tell if the given number is even or odd.
  */
 
 function evenOrOdd(int $number): string
