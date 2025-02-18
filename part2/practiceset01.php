@@ -2,19 +2,34 @@
 
 // Poorly organized and hard-to-read code
 
-// Calculate the total price of items in a shopping cart
+/**
+ * Calculate the total price of items in a shopping cart
+ *
+ * Iterates through the given array of items and sums up the prices of all products. Each item in the array must have a 'price' key.
+ *
+ * @param array $items an array of products, where each product contains a 'price' key.
+ * @return float the total_price of all products in the cart.
+ */
+
+function calculateTotalPrice(array $items): float
+{
+    $total_price = 0.0;
+    foreach ($items as $item) {
+        $total_price += $item['price'];
+    }
+    return $total_price;
+}
+
 $items = [
     ['name' => 'Widget A', 'price' => 10],
     ['name' => 'Widget B', 'price' => 15],
     ['name' => 'Widget C', 'price' => 20]
 ];
 
-$total = 0;
-foreach ($items as $item) {
-    $total += $item['price'];
-}
+// Display total price
+$total = calculateTotalPrice($items);
+echo "Total Price: $" . $total;
 
-echo "Total price: $" . $total;
 
 // Perform a series of string manipulation
 $string = "This is a poorly written program with little structure and readability.";
